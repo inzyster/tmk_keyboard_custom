@@ -105,11 +105,11 @@ uint8_t matrix_scan(void)
     i2c_wrapper_task();
 
     if (timer_elapsed(kimera_scan_timestamp) >= 1000) {
-        xprintf("======== 1s task ========\n");
-        xprintf("Scan, %u\n", kimera_scan_timestamp);
+        //xprintf("======== 1s task ========\n");
+        //xprintf("Scan, %u\n", kimera_scan_timestamp);
         kimera_scan_timestamp = timer_read();
         kimera_scan();
-        xprintf("=========================\n");
+        //xprintf("=========================\n");
     }
 
 #if IMPROVED_DEBOUNCE
